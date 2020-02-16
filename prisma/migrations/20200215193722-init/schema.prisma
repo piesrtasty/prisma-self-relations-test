@@ -1,6 +1,6 @@
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url = "***"
 }
 
@@ -76,7 +76,7 @@ model Comment {
   text          String             
   author        User
   post          Post?
-  parent        Comment        @relation(name: "commentReplies")
+  parent        Comment?       @relation(name: "commentReplies")
   replies       Comment[]      @relation(name: "commentReplies")
   votes         CommentVote[]
 }

@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  test:
+    container_name: test
+    ports:
+      - '5432:5432'
+    image: postgres:10.10
+    restart: always
+    environment:
+      POSTGRES_DATABASE: test
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+    volumes:
+      - test:/var/lib/postgres
+
+volumes: #define our mysql volume used above
+  test:

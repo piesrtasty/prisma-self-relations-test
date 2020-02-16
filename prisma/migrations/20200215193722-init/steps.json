@@ -28,7 +28,7 @@
         "source": "db"
       },
       "argument": "provider",
-      "value": "\"sqlite\""
+      "value": "\"postgresql\""
     },
     {
       "tag": "CreateArgument",
@@ -37,7 +37,7 @@
         "source": "db"
       },
       "argument": "url",
-      "value": "\"sqlite:./dev.db\""
+      "value": "\"postgresql://test:test@0.0.0.0:5432/test\""
     },
     {
       "tag": "CreateModel",
@@ -1020,7 +1020,7 @@
       "model": "Comment",
       "field": "parent",
       "type": "Comment",
-      "arity": "Required"
+      "arity": "Optional"
     },
     {
       "tag": "CreateDirective",
